@@ -41,9 +41,19 @@ object EvalMetrics {
     consisHDFS
   }
 
-  def diversityGini(itemPctrLabel: RDD[(String, Double, Double)]): String = {
-    val diversityGiniHDFS: String = "test3"
-    diversityGiniHDFS
+  def diversityGiniCoefficient(itemPctrLabel: RDD[(String, Double, Double)]): String = {
+    val diversityGiniCoefficientHDFS: String = "test3"
+    diversityGiniCoefficientHDFS
+  }
+
+  def diversityGiniSimpson(itemPctrLabel: RDD[(String, Double, Double)]): String = {
+    val diversityGiniSimpsonHDFS: String = "test4"
+    diversityGiniSimpsonHDFS
+  }
+
+  def diversityExpoNumGreaterThanX(itemPctrLabel: RDD[(String, Double, Double)]): String = {
+    val diversityExpoNumGreaterThanXHDFS: String = "test5"
+    diversityExpoNumGreaterThanXHDFS
   }
 
   def ecpm(): Double = {
@@ -55,6 +65,7 @@ object EvalMetrics {
     val arpu = 0.0
     arpu
   }
+
 
   def runEval(in: String, out: String): Unit = {
 
